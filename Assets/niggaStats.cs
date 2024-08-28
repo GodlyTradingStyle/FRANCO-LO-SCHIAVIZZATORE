@@ -13,7 +13,7 @@ public class niggaStats : MonoBehaviour
     public float revenueSpeed=10;
     public int level = 1;
     public float costFactor = 1.07f; // Aumenta il costo quando il personaggio viene migliorato
-
+    public NiggaUpgrade upgrade; 
     public dataStorage dataStorage;
     public GameObject panel;
     public currentMoney Money;
@@ -39,6 +39,7 @@ public class niggaStats : MonoBehaviour
         {
             GeneraSoldi();
         }
+
     }
 
 
@@ -46,17 +47,30 @@ public class niggaStats : MonoBehaviour
 
 
 
-    public void Upgrade()
-    {
-        level++;
-        revenue *= 1.05f; // Aumenta la produzione di soldi per secondo
-        actualCost *= costFactor; // Aumenta il costo per il prossimo livello
-    }
+   
 
     public void GeneraSoldi()
     {
         dataStorage.Earn(revenue);
         time = 0;
     }
+
+
+   public void applyUpgrade(NiggaUpgrade.Upgrade upgrade)
+    {
+        if (upgrade.upgradeName == "Revenue")
+        {
+            revenue = upgrade.value;
+        }
+        else if (upgrade.upgradeName == "Speed")
+        {
+            revenueSpeed /= upgrade.value;
+        }
+        else
+        {
+
+        }
+    }
+
 
 }

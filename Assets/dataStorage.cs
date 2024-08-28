@@ -45,7 +45,7 @@ void Start()
     }
     public void Reset()
     {
-        moneyScript.Money=100;
+        money=100;
     }
 
     public void Buy(float costo)

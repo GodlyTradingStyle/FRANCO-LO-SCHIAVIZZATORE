@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4202900374611364310}
   - component: {fileID: 6855096032114103807}
+  - component: {fileID: 3639793799696223696}
   m_Layer: 0
   m_Name: Nigga
   m_TagString: Untagged
@@ -44,3 +45,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95bb90459205b7428813f9de380502d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
+  niggaName: 
+  initialCost: 10
+  actualCost: 0
+  revenue: 1
+  revenueSpeed: 10
+  level: 1
+  costFactor: 1.07
+  upgrade: {fileID: 0}
+  dataStorage: {fileID: 0}
+  panel: {fileID: 0}
+  Money: {fileID: 0}
+  Niggas: {fileID: 0}
+--- !u!114 &3639793799696223696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928629114238081926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612c3c54354633b428b58030545588e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nigga: {fileID: 6855096032114103807}
+  upgrades: []
